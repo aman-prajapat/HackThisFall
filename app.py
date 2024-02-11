@@ -20,9 +20,10 @@ def complete_details(conn,username,new_password):
             twitter_link = st.text_input("Twitter Link",value="",placeholder = None)
             github_link = st.text_input("GitHub Link",value="",placeholder = None)
             phone_number = st.text_input("Phone Number",value="",placeholder = None)
-            is_speaker = st.number_input("Is speaker",value=0)
-            past_experience = st.text_area("Past Experience",value="",placeholder = None)
+            is_speaker = st.number_input("Is speaker",value=0,min_value = 0,max_value = 1)
+            past_experience = st.text_area("Expertise",value="",placeholder = None)
             photo = st.file_uploader("Upload Photo", type=["jpg", "png"])
+            photo = None
             if photo != None:
                  photo = photo.read()
 
